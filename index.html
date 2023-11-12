@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator4.0</title>
+    <style>
+        body{
+            background-color: #282828;
+          }
+        .t{
+            /* color: black;
+            text-emphasis-color: black; */
+            margin-left: 600px;
+            /* border: 0.dpx solid grey; */
+            /* margin-top: ; */
+
+        }
+        .b3{
+            border: 3px solid #000000;
+            height:65px;
+            width: 65px;
+        }
+        #con{
+            font-size: large;
+            font-weight: bold;
+            margin-left:600px;
+        }
+        #ta1{
+            /* color:black; */
+            border: 3px solid #000000;
+            color: white;
+            background-color: white;
+            height:65px;
+            margin-left: 602px;
+            width: 271px;
+            margin-top: 100px;
+            text-size-adjust: 40px;
+        }
+        #d{
+            text-size-adjust: 40px;
+        }
+    </style>
+</head>
+<body>
+    <table id="ta1">
+        <tr>
+            <td id="d" style="color:black">0000</td>
+        </tr>
+    </table>
+    <table class="t">
+        <tr>
+            <td><button class="b3" onclick="sv1()">1</button></td>
+            <td><button class="b3" onclick="sv2()">2</button></td>
+            <td><button class="b3" onclick="sv3()">3</button></td>
+            <td><button class="b3" onclick="add1()">+</button></td>
+        </tr>
+        <tr>    
+            <td><button class="b3" onclick="sv4()">4</button></td>
+            <td><button class="b3" onclick="sv5()">5</button></td>
+            <td><button class="b3" onclick="sv6()">6</button></td>
+            <td><button class="b3" onclick="sub1()">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="b3" onclick="sv7()">7</button></td>
+            <td><button class="b3" onclick="sv8()">8</button></td>
+            <td><button class="b3" onclick="sv9()">9</button></td>
+            <td><button class="b3" onclick="mult1()">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="b3" onclick="shit()">C</button></td>
+            <td><button class="b3" onclick="sv0()">0</button></td>
+            <td><button class="b3" onclick="cal()">=</button></td>
+            <td><button class="b3" onclick="div1()">/</button></td>
+        </tr>
+
+    </table>
+    <p id="con"></p>
+    <script>
+        var n1 = 0;
+        var op = 0;
+        var sn = 0;
+        var n2 = 0;
+        var n3 = 0;
+        var loop = 0;
+        var i = 0;
+        var tr = 0;
+        var ex = 0;
+        var ex2 = 0;
+        function shit(){
+            n1 = 0;
+            op = 0;
+            sn = 0;
+            n2 = 0;
+            n3 = 0;
+            loop = 0;
+            i = 0;
+            console.log(n1);
+            // console.log("Hai douzo yorushiku");
+        };
+        
+        function sv1(){
+            if(sn == 0){
+                n1 = 1;
+                sn = 11;
+                // document.getElementById('d').innerHTML = n1;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                
+                n3 = 1
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 1;
+                    n1 = n1*10 + n2
+                    // n1 = n1 += n1
+                    // ex2 = 1;
+                    document.getElementById('d').innerHTML = n1;
+                    console.log(n1);
+
+                }
+                else{
+                    n2 = 1;
+                    ex2 = 1;
+                    // document.getElementById('d').innerHTML = n2;
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                    console.log(n2);
+                }
+            }
+        }
+            
+        
+        function sv2(){
+            if(sn == 0){
+                n1 = 2;
+                sn = 22;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 2;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 2;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                // else if(ex != 0){
+                //     n2 = 2;
+                //     n2 = n2*10 + n2;
+                //     ex = 22;
+                //     ex2 = 1;
+                //     console.log(n2);
+                // }
+                else{
+                    n2 = 2;
+                    ex = 22;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            }
+            
+        };
+        function sv3(){
+            // sn = 33;
+            if(sn==0){
+                n1 = 3;
+                sn = 33;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 3;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 3;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 3;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+            
+        };
+
+        // function sv3(){
+        //     if(sn == 0){
+        //         sn = 33;
+        //         n1 = 3;
+        //         console.log(n1);
+        //     }
+        //     else if(sn == 33){
+        //         n2 = 3;
+        //         console.log(n2);
+        //     }
+        //     else{
+        //         n2 = 3;
+        //         console.log(n2);
+                
+        //     };
+        // };
+        function sv4(){
+            if(sn == 0){
+                sn = 44;
+                n1 = 4;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 4;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 4;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 4;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        function sv5(){
+            if(sn == 0){
+                sn = 55;
+                n1 = 5;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 5;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 5;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 5;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        function sv6(){
+            if(sn == 0){
+                sn = 66;
+                n1 = 6;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 6;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+                        }
+            else{
+                if(op == 0){
+                    n2 = 6;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 6;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        function sv7(){
+            if(sn == 0){
+                sn = 77;
+                n1 = 7;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 7;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 7;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 7;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        function sv8(){
+            if(sn == 0){
+                sn = 88;
+                n1 = 8;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 8;
+                n2 = n2*10 + n3;
+                console.log(n2);
+                document.getElementById('d').innerHTML = n1 + op2 + n2;
+            }
+            else{
+                if(op == 0){
+                    n2 = 8;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 8;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                };
+            };
+        };
+        function sv9(){
+            if(sn == 0){
+                sn = 99;
+                n1 = 9;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 9;
+                n2 = n2*10 + n3;
+                console.log(n2);
+            }
+            else{
+                if(op == 0){
+                    n2 = 9;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                    document.getElementById('d').innerHTML = n1;
+                }
+                else{
+                    n2 = 9;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        function sv0(){
+            if(sn == 0){
+                sn = 100;
+                n1 = 0;
+                console.log(n1);
+                document.getElementById('d').innerHTML = n1;
+            }
+            else if(ex2 != 0){
+                n3 = 0;
+                n2 = n2*10 + n3;
+                console.log(n2);
+            }
+            else{
+                if(op == 0){
+                    n2 = 0;
+                    n1 = n1*10 + n2;
+                    console.log(n1);
+                }
+                else{
+                    n2 = 0;
+                    ex2 = 1;
+                    console.log(n2);
+                    document.getElementById('d').innerHTML = n1 + op2 + n2;
+                }
+            };
+        };
+        // if(n3 == 1){
+        //     n2 = 1;
+        // }
+        // else if(n3 == 2){
+        //     n2 = 2;
+        // }
+        // if(n3 == 3){
+        //     n2 = 3;
+        // }
+        // if(n3 == 4){
+        //     n2 = 4;
+        // }
+        // else if (n3 == 5){
+        //     n2 = 5;
+        // }
+        // else if(n3 == 6){
+        //     n2 = 6;
+        // }
+        function add1(){
+            op = 1;
+            console.log("+");
+            // document.getElementById('d').innerHTML = n1 + "+"
+            op2 = "+";
+            document.getElementById('d').innerHTML = n1 + op2;
+
+        };
+        function sub1(){
+            op = 2;
+            console.log("-");
+            op2 = "-";
+            document.getElementById('d').innerHTML = n1 + op2;
+
+        };
+        function mult1(){
+            op = 3;
+            console.log("x");
+            op2 = " × ";
+            document.getElementById('d').innerHTML = n1 + op2;
+
+        };
+        function div1(){
+            op = 4;
+            console.log("/");
+            op2 = "/";
+            document.getElementById('d').innerHTML = n1 + op2;
+        };
+        function cal(){
+            if(op == 1){
+                ans = n1 + n2;
+                console.log(`${n1} + ${n2} = ${ans}`);
+                n1 = 0;
+                n2 = 0;
+                sn = 0;
+                op = 0;
+                n3 = 0;
+                ex2 = 0;
+                document.getElementById('d').innerHTML =` ‎ 
+                ${ans}`;
+            };
+            if(op == 2){
+                ans = n1-n2;
+                console.log(`${n1} - ${n2} = ${ans}`);
+                n1 = 0;
+                n2 = 0;
+                sn = 0;
+                op = 0;
+                n3 = 0;
+                ex = 0;
+                ex2 = 0;
+                document.getElementById('d').innerHTML = ans;
+            };
+            if(op == 3){
+                ans = n1*n2;
+                console.log(`${n1} x ${n2} = ${ans}`);
+                n1 = 0;
+                n2 = 0;
+                sn = 0;
+                op = 0;
+                n3 = 0;
+                ex = 0;
+                ex2 = 0;
+                document.getElementById('d').innerHTML = ans;
+            };
+            if(op == 4){
+                ans = n1/n2;
+                console.log(`${n1} / ${n2} = ${ans}`);
+                n1 = 0;
+                n2 = 0;
+                sn = 0;
+                op = 0;
+                n3 = 0;
+                ex = 0;
+                ex2 = 0;
+                document.getElementById('d').innerHTML = ans;
+            }
+        };
+ 
+    </script>
+</body>
+</html>
